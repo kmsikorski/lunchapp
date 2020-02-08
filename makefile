@@ -1,6 +1,6 @@
 MAKEFLAGS += --silent
 
-PYTHON_VERSION = "3.6.5"
+PYTHON_VERSION = "3.8.1"
 VENV_NAME := $(shell cat .python-version)
 
 setup-venv: _install_virtualenv _install_packages
