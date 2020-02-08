@@ -8,6 +8,7 @@ run: _run_backend
 
 
 _install_virtualenv:
+	pyenv install "3.6.5"
 	echo "Installing virtual environment..."
 	echo "Uninstalling previous environment..."
 	pyenv uninstall -f "its"
