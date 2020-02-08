@@ -1,5 +1,7 @@
 MAKEFLAGS += --silent
 
+PYTHON_VERSION = "3.6.5"
+VENV_NAME := $(shell cat .python-version)
 
 setup-venv: _install_virtualenv _install_packages
 
@@ -8,12 +10,19 @@ run: _run_backend
 
 
 _install_virtualenv:
-	pyenv install "3.6.5"
+	echo "Checking python pyenv and installation..."
+	if pyenv versions | grep -q $(PYTHON_VERSION); then \
+		echo "python $(PYTHON_VERSION) installation was found in pyenv"; \
+	else \
+		echo "python $(PYTHON_VERSION) installation was not found in pyenv, installing it..."; \
+		pyenv install $(PYTHON_VERSION); \
+	fi
+
 	echo "Installing virtual environment..."
 	echo "Uninstalling previous environment..."
-	pyenv uninstall -f "its"
+	pyenv uninstall -f $(VENV_NAME)
 	echo "Installing new environment..."
-	pyenv virtualenv "3.6.5" "its"
+	pyenv virtualenv $(PYTHON_VERSION) $(VENV_NAME)
 
 _install_packages:
 	echo "Installing packages and dependencies..."
