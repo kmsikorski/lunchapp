@@ -7,7 +7,7 @@ CORS(app)
 
 USERS = {
     'Kamil': {'role': 'admin', 'password': 'mmmmm'},
-    'Karolina': {'role': 'adminka', 'password': 'stupki'},
+    'Karolina': {'role': 'adminka', 'password': 'uuuuu'},
     'Guest': {'role': 'guest', 'password': 'guest'}
 }
 
