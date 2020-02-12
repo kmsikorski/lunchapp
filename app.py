@@ -1,6 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, jsonify, render_template
 from flask_cors import CORS
-import json
 
 app = Flask(__name__)
 CORS(app)
@@ -27,12 +26,12 @@ LUNCHES = {
 
 @app.route('/users')
 def users():
-    return json.dumps(USERS)
+    return jsonify(USERS)
 
 @app.route('/restaurants')
 def restaurants():
-    return json.dumps(RESTAURANTS)
+    return jsonify(RESTAURANTS)
 
 @app.route('/lunches')
 def lunches():
-    return json.dumps(LUNCHES)
+    return jsonify(LUNCHES)
