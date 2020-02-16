@@ -8,14 +8,6 @@ import axios from 'axios';
 
 
 class App extends React.Component {
-
-  // componentDidMount(){
-  //   axios.get('/lunches')
-  //   .then(res => {
-  //       console.log(res.data)});
-
-  //   }
-
   
   render(){
     return (
