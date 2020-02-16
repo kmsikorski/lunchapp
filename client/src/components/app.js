@@ -2,22 +2,26 @@ import React from 'react';
 import './app.css';
 import Header from './header/header.js'
 import Footer from './footer/footer.js'
+import Container from './container/container.jsx'
+
+import axios from 'axios';
 
 
 class App extends React.Component {
 
-  componentDidMount(){
-    fetch('http://localhost:5000/users')
-    .then((response) => {
-      console.log("odpowiedz", response.json()) ;
-    });
-    }
+  // componentDidMount(){
+  //   axios.get('/lunches')
+  //   .then(res => {
+  //       console.log(res.data)});
+
+  //   }
 
   
   render(){
     return (
       <div className="App">
         <Header />
+        <Container />
         <Footer />
       </div>
     );
