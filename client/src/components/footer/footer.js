@@ -5,8 +5,8 @@ import Logo from './restaurant.png'
 function Footer(){
     return(
         <footer>
-            <div id="footer-image-container">
-                <img src={Logo}></img>
+            <div id="footer-image-container" >
+                <img src={Logo} alt="Podgląd niedostępny"></img>
             </div>
             <div id="footer-text">
                 <p>© 2020 lunchapp.pl</p>
