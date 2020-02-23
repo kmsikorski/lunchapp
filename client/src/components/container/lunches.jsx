@@ -3,8 +3,7 @@ import axios from 'axios';
 import './container.scss';
 
 
-
-class Container extends React.Component {
+class LunchesContainer extends React.Component {
 
     constructor(props){
         super(props)
@@ -12,19 +11,21 @@ class Container extends React.Component {
             lunches:{}
         }
 
+
         axios.get('/lunches')
-        .then(res => {
-            this.setState({
+          .then(res => {
+              this.setState({
                 lunches: res.data
-            })           
-        });
+              })
+            })
+
     }
+
 
  
   render(){
     return (
-      <div className="container" >
-          
+      <div className="container" > 
           {Array.from(Object.keys(this.state.lunches)).map(place =>(
             <div key={place}>
               <h2>{place}</h2>
@@ -40,6 +41,7 @@ class Container extends React.Component {
       </div>
     );
   }
-}
+};
 
-export default Container;
+
+export default LunchesContainer;
