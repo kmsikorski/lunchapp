@@ -31,13 +31,8 @@ class UsersContainer extends React.Component {
           {Array.from(Object.keys(this.state.users)).map(name =>(
             <div key={name}>
               <h2>{name}</h2>
-              {Array.from(Object.keys(this.state.users[name])).map(attribute => (
-                <div key={attribute}>
-                  <h3>{attribute}</h3>
-                  <div>{this.state.users[name][attribute]}</div>
-                </div>
-                
-              ))}
+              <div>{this.state.users[name]['role']}</div>
+              <div>{this.state.users[name]['password']}</div>
             </div>
           ))}
       </div>

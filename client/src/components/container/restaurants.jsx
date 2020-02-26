@@ -31,13 +31,9 @@ class RestaurantsContainer extends React.Component {
           {Array.from(Object.keys(this.state.restaurants)).map(place =>(
             <div key={place}>
               <h2>{place}</h2>
-              {Array.from(Object.keys(this.state.restaurants[place])).map(attribute => (
-                <div key={attribute}>
-                  <h3>{attribute}</h3>
-                  <div>{this.state.restaurants[place][attribute]}</div>
-                </div>
-                
-              ))}
+              <div>{this.state.restaurants[place]['price']}</div>
+              <div>{this.state.restaurants[place]['rating']}</div>
+              <div>{this.state.restaurants[place]['cuisine']}</div>
             </div>
           ))}
       </div>
