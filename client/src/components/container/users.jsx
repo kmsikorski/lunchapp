@@ -2,9 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import './container.scss';
 
-
-
-
 class UsersContainer extends React.Component {
 
   constructor(props){
@@ -12,18 +9,13 @@ class UsersContainer extends React.Component {
     this.state = {
       users:{}
     }
-
-
-     axios.get(`/users`)
-       .then(res => {
-         this.setState({
-           users: res.data
-         })
-       })
+    axios.get(`/users`)
+      .then(res => {
+        this.setState({
+          users: res.data
+        })
+      })
   }
-
-
-
  
   render(){
     return (

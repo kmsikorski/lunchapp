@@ -11,9 +11,6 @@ import LunchesContainer from './container/lunches.jsx'
 import RestaurantsContainer from './container/restaurants.jsx'
 import UsersContainer from './container/users.jsx'
 
-
-
-
 class App extends React.Component {
   
   render(){

@@ -2,9 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import './container.scss';
 
-
-
-
 class RestaurantsContainer extends React.Component {
 
   constructor(props){
@@ -20,7 +17,6 @@ class RestaurantsContainer extends React.Component {
       })
   }
 
- 
   render(){
     return (
       <div className="container" > 
