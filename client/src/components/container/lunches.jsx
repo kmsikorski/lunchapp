@@ -29,7 +29,7 @@ class LunchesContainer extends React.Component {
           {Array.from(Object.keys(this.state.lunches)).map(place =>(
             <div key={place}>
               <h2>{place}</h2>
-              <div>{this.state.lunches[place]['soup']}</div>
+              <div>soup {this.state.lunches[place]['soup']}</div>
               <div>{this.state.lunches[place]['main_course']}</div>
               <div>{this.state.lunches[place]['dessert']}</div>
               <div>{this.state.lunches[place]['price']}</div>
