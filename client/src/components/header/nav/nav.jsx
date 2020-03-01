@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 import {
-    Link
-  } from "react-router-dom";
-import './nav.scss';
+  Link
+} from "react-router-dom";
+import "./nav.scss";
 
 function Nav(){
   return(
@@ -13,7 +13,7 @@ function Nav(){
         <li><Link to="/lunches">LUNCHES</Link></li>
       </ul>
     </nav>      
-  )
+  );
 }
 
 export default Nav;

@@ -1,0 +1,7 @@
+./src/images/**
+./node_modules
+
+/src/components/app.test.js
+/src/serviceWorker.js
+/src/setupTests.js
+

@@ -1,6 +1,6 @@
-import React from 'react';
-import './header.scss';
-import Nav from './nav/nav.jsx'
+import React from "react";
+import "./header.scss";
+import Nav from "./nav/nav.jsx";
 
 function Header(){
   return(
@@ -10,7 +10,7 @@ function Header(){
       </div>
       <Nav/>
     </header>
-  )
+  );
 }
 
 export default Header;

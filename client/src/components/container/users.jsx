@@ -1,20 +1,20 @@
-import React from 'react';
-import axios from 'axios';
-import './container.scss';
+import React from "react";
+import axios from "axios";
+import "./container.scss";
 
 class UsersContainer extends React.Component {
 
   constructor(props){
-    super(props)
+    super(props);
     this.state = {
       users:{}
-    }
-    axios.get(`/users`)
+    };
+    axios.get("/users")
       .then(res => {
         this.setState({
           users: res.data
-        })
-      })
+        });
+      });
   }
  
   render(){
@@ -23,14 +23,13 @@ class UsersContainer extends React.Component {
         {Array.from(Object.keys(this.state.users)).map(name =>(
           <div key={name}>
             <h2>{name}</h2>
-            <div>{this.state.users[name]['role']}</div>
-            <div>{this.state.users[name]['password']}</div>
+            <div>role: {this.state.users[name]["role"]}</div>
+            <div>password: {this.state.users[name]["password"]}</div>
           </div>
         ))}
       </div>
     );
   }
 }
-
 
 export default UsersContainer;

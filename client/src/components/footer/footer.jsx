@@ -1,6 +1,6 @@
-import React from 'react';
-import './footer.scss';
-import Logo from './restaurant.png'
+import React from "react";
+import "./footer.scss";
+import Logo from "./restaurant.png";
 
 function Footer(){
   return(
@@ -14,7 +14,7 @@ function Footer(){
         <p>Kopiowanie i rozpowszechnianie bez zgody autora niniejszej strony jest zabronione</p>
       </div>
     </footer>
-  )
+  );
 }
 
 export default Footer;
