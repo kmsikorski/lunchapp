@@ -2,46 +2,17 @@ $small: 500px;
 
 nav{
   position: absolute;
-  top:50%;
-  transform: translateY(-50%);
+  top:100%;
   right: 0;
-
-  .hamburger{
-    position: absolute;
-    top: -50%;
-    right:50%;
-    display: none;
-    span{
-      display: block;
-      background: white;
-      border-radius: 3px;
-      width: 35px;
-      height: 5px;
-      margin: 6px 0;
-      transition: 0.4s;
-    }
-  }
-
-  .cross{
-      span{
-      &:first-child{
-        transform: rotate(-45deg) translate(-9px, 6px);
-      }
-      &:nth-child(2){
-        opacity:0;
-      }
-      &:nth-child(3){
-        transform: rotate(45deg) translate(-8px, -8px);
-
-      }
-    }
-  }
-  
+  background: grey;
+  width: 100%;
+ 
   ul{
     margin:0;
+    padding:0px;
 
     li{
-      display: inline;
+      display: block;
       margin: 10px;
       
       a{
@@ -49,5 +20,22 @@ nav{
         text-decoration: none;
       }
     }
+  }
+}
+
+@media (min-width: $small){
+  nav{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  float: right;
+  text-align: right;
+  background: transparent;
+    ul{
+      li{
+        display: inline;
+      }
+    }
+
   }
 }
