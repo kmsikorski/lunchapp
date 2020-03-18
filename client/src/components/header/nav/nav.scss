@@ -7,6 +7,10 @@ nav{
   right: 0;
 
   .hamburger{
+    position: absolute;
+    top: -50%;
+    right:50%;
+    display: none;
     span{
       display: block;
       background: white;
