@@ -1,24 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./hamburger.scss";
 
 class Hamburger extends React.Component{
   constructor(props){
     super(props);
-    this.state = {
-      isHamburgerClicked: false
-    };
-    this.toogleHamburger = this.toogleHamburger.bind(this);
-  }
-
-  toogleHamburger(){
-    this.setState({
-      isHamburgerClicked: !this.state.isHamburgerClicked
-    });
   }
 
   render(){
     return(
-      <div className = {`hamburger ${(this.state.isHamburgerClicked? "cross" : "")}`}
+      <div className = {`hamburger ${(this.props.isHamburgerClicked? "cross" : "")}`}
         onClick = {this.toogleHamburger}>
         <span></span>
         <span></span>
@@ -27,5 +18,9 @@ class Hamburger extends React.Component{
     );
   }
 }
+
+Hamburger.propTypes = {
+  isHamburgerClicked: PropTypes.bool,
+};
 
 export default Hamburger;

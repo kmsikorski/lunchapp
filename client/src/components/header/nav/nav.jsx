@@ -14,9 +14,9 @@ class Nav extends React.Component{
     return(
       <nav className = {this.props.wraped ? "wraped" : ""}>
         <ul>
-          <li><Link to="/restaurants">RESTAURANTS</Link></li>
-          <li><Link to="/users">USERS</Link></li>
-          <li><Link to="/lunches">LUNCHES</Link></li>
+          <li onClick = {this.props.func}><Link to="/restaurants">RESTAURANTS</Link></li>
+          <li onClick = {this.props.func}><Link to="/users">USERS</Link></li>
+          <li onClick = {this.props.func}><Link to="/lunches">LUNCHES</Link></li>
         </ul>
       </nav>      
     );
@@ -24,7 +24,8 @@ class Nav extends React.Component{
 }
 
 Nav.propTypes = {
-  wraped: PropTypes.bool
+  wraped: PropTypes.bool,
+  func: PropTypes.func
 };
 
 export default Nav;

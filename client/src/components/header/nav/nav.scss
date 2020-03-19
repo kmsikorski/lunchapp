@@ -8,6 +8,7 @@ $small: 500px;
 nav{
   position: absolute;
   top:-1000%;
+  transition: top 1s ; 
   right: 0;
   background: grey;
   width: 100%;

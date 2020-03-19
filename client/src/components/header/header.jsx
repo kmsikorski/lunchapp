@@ -7,14 +7,16 @@ class Header extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      wrapMenu: false
+      wrapMenu: false,
+      isHamburgerClicked: false
     };
     this.unwrapMenu = this.unwrapMenu.bind(this);
   }
   
   unwrapMenu(){
     this.setState({
-      wrapMenu: ! this.state.wrapMenu
+      wrapMenu: ! this.state.wrapMenu,
+      isHamburgerClicked: ! this.state.isHamburgerClicked,
     });
   }
 
@@ -25,10 +27,13 @@ class Header extends React.Component{
           <h1>LunchApp</h1>
         </div>
         <div onClick = {this.unwrapMenu}>
-          <Hamburger/>
+          <Hamburger
+            isHamburgerClicked = {this.state.isHamburgerClicked}
+          />
         </div>
         <Nav
-          wraped = {this.state.wrapMenu}/>
+          wraped = {this.state.wrapMenu}
+          func = {this.unwrapMenu}/>
       </header>
     );
   }  
