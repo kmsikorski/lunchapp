@@ -11,15 +11,12 @@ nav{
   right: 0;
   background: grey;
   width: 100%;
- 
   ul{
     margin:0;
     padding:0px;
-
     li{
       display: block;
       margin: 10px;
-      
       a{
         color: white;
         text-decoration: none;
@@ -30,17 +27,14 @@ nav{
 
 @media (min-width: $small){
   nav{
-  position: absolute;
-  top:50% !important;
-  transform: translateY(-50%);
-  float: right;
-  text-align: right;
-  background: transparent;
+    top:50% !important;
+    transform: translateY(-50%);
+    text-align: right;
+    background: transparent;
     ul{
       li{
         display: inline;
       }
     }
-
   }
 }

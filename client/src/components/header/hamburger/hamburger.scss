@@ -1,17 +1,15 @@
 $small: 500px;
 
-
 @media (min-width: $small){
   .hamburger{
     display: none;
   }
-};
-
+}
 
 .hamburger{
   position: absolute;
   top: 50%;
-  right:50%;
+  right:20%;
   transform: translate(50%, -50%);
   span{
     display: block;
@@ -26,15 +24,14 @@ $small: 500px;
 
 .cross{
     span{
-    &:first-child{
-      transform: rotate(-45deg) translate(-9px, 6px);
-    }
-    &:nth-child(2){
-      opacity:0;
-    }
-    &:nth-child(3){
-      transform: rotate(45deg) translate(-8px, -8px);
-
-    }
+      &:first-child{
+        transform: rotate(-45deg) translate(-9px, 6px);
+      }
+      &:nth-child(2){
+        opacity:0;
+      }
+      &:nth-child(3){
+        transform: rotate(45deg) translate(-8px, -8px);
+      }
   }
 }
