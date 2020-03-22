@@ -2,7 +2,7 @@ $small: 500px;
 
 .wraped{
   top:100%;
-  transition: top 1s ; 
+  transition: cubic-bezier(0.22, 0.2, 0.03, 1) 1s ;
 }
 
 nav{
@@ -11,6 +11,7 @@ nav{
   transition: top 1s ; 
   right: 0;
   background: grey;
+  opacity: 90%;
   width: 100%;
   ul{
     margin:0;

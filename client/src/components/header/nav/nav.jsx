@@ -12,13 +12,13 @@ class Nav extends React.Component{
 
   render(){
     return(
-      <nav className = {this.props.wraped ? "wraped" : ""}>
+      <nav className = {this.props.wraped ? "wraped" : ""}>     
         <ul>
           <li onClick = {this.props.func}><Link to="/restaurants">RESTAURANTS</Link></li>
           <li onClick = {this.props.func}><Link to="/users">USERS</Link></li>
           <li onClick = {this.props.func}><Link to="/lunches">LUNCHES</Link></li>
         </ul>
-      </nav>      
+      </nav>            
     );
   }  
 }
