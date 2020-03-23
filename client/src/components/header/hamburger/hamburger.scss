@@ -1,0 +1,37 @@
+$small: 500px;
+
+@media (min-width: $small){
+  .hamburger{
+    display: none;
+  }
+}
+
+.hamburger{
+  position: absolute;
+  top: 50%;
+  right:20%;
+  transform: translate(50%, -50%);
+  span{
+    display: block;
+    background: white;
+    border-radius: 3px;
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+}
+
+.cross{
+    span{
+      &:first-child{
+        transform: rotate(-45deg) translate(-9px, 6px);
+      }
+      &:nth-child(2){
+        opacity:0;
+      }
+      &:nth-child(3){
+        transform: rotate(45deg) translate(-8px, -8px);
+      }
+  }
+}
